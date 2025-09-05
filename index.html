@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winter Design Studio - Camperas de Invierno Personalizadas | Diseño a Medida</title>
+    <meta name="description" content="Diseñamos las mejores camperas de invierno personalizadas. Confección artesanal, materiales premium y diseños únicos a medida. Solicita tu presupuesto.">
+    <meta name="keywords" content="camperas invierno personalizadas, diseño camperas, confección artesanal, abrigos personalizados, ropa invierno diseño">
+    <meta name="author" content="Winter Design Studio">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://winterdesignstudio.com/">
+    <meta property="og:title" content="Winter Design Studio - Camperas de Invierno Personalizadas">
+    <meta property="og:description" content="Diseñamos las mejores camperas de invierno personalizadas con confección artesanal y materiales premium.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Winter Design Studio - Camperas de Invierno Personalizadas">
+    <meta property="twitter:description" content="Diseñamos las mejores camperas de invierno personalizadas con confección artesanal y materiales premium.">
+    
+    <link rel="canonical" href="https://winterdesignstudio.com/">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #60a5fa;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="snow" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23snow)"/></svg>');
+            animation: snowfall 20s linear infinite;
+        }
+        
+        @keyframes snowfall {
+            0% { transform: translateY(-100px); }
+            100% { transform: translateY(100vh); }
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            z-index: 2;
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.3)); }
+            to { filter: drop-shadow(0 0 30px rgba(96, 165, 250, 0.5)); }
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1e293b;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(96, 165, 250, 0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #3b82f6;
+        }
+        
+        /* Portfolio Section */
+        .portfolio {
+            padding: 6rem 2rem;
+            background: #1e293b;
+            color: white;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .portfolio-item {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #374151, #4b5563);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        
+        .portfolio-item:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+        }
+        
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #374151;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem 1rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #60a5fa;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .contact-form {
+                padding: 2rem;
+            }
+        }
+        
+        /* Animation utilities */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Success message */
+        .success-message {
+            background: #10b981;
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">❄️ Winter Design Studio</a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Camperas de Invierno Únicas</h1>
+            <p>Diseñamos y confeccionamos las mejores camperas personalizadas con materiales premium y acabados artesanales. Cada pieza es única, como tu estilo.</p>
+            <a href="#contacto" class="cta-button">Solicita tu Diseño Personalizado</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title fade-in">Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">✂️</div>
+                    <h3>Diseño Personalizado</h3>
+                    <p>Creamos diseños únicos adaptados a tu estilo personal y necesidades específicas. Cada campera es una obra de arte funcional.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🧵</div>
+                    <h3>Confección Artesanal</h3>
+                    <p>Utilizamos técnicas tradicionales de costura combinadas con tecnología moderna para garantizar la máxima calidad y durabilidad.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🏔️</div>
+                    <h3>Materiales Premium</h3>
+                    <p>Seleccionamos solo los mejores materiales: plumas de ganso, tejidos técnicos impermeables y forros de alta calidad.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">📏</div>
+                    <h3>Medidas Exactas</h3>
+                    <p>Tomamos medidas precisas para garantizar un ajuste perfecto. Cada campera se adapta completamente a tu cuerpo.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🎨</div>
+                    <h3>Colores y Texturas</h3>
+                    <p>Amplia gama de colores, texturas y acabados para que tu campera refleje perfectamente tu personalidad.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">⚡</div>
+                    <h3>Entrega Rápida</h3>
+                    <p>Proceso de confección optimizado con tiempos de entrega competitivos sin comprometer la calidad artesanal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title fade-in">Nuestro Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item fade-in">Campera Alpine Pro</div>
+                <div class="portfolio-item fade-in">Modelo Urban Winter</div>
+                <div class="portfolio-item fade-in">Diseño Expedition</div>
+                <div class="portfolio-item fade-in">Campera Classic Wool</div>
+                <div class="portfolio-item fade-in">Modelo Tech Storm</div>
+                <div class="portfolio-item fade-in">Diseño Minimalist</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="contact-container">
+            <h2 class="section-title fade-in">Solicita tu Campera Personalizada</h2>
+            <form class="contact-form fade-in" id="contactForm">
+                <div class="success-message" id="successMessage">
+                    ¡Gracias por tu solicitud! Te contactaremos pronto para comenzar con el diseño de tu campera personalizada.
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Nombre Completo *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="style">Estilo de Campera *</label>
+                    <select id="style" name="style" required>
+                        <option value="">Selecciona un estilo</option>
+                        <option value="urbana">Urbana / Casual</option>
+                        <option value="deportiva">Deportiva / Outdoor</option>
+                        <option value="elegante">Elegante / Formal</option>
+                        <option value="expedicion">Expedición / Extrema</option>
+                        <option value="personalizado">Diseño Completamente Personalizado</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="budget">Presupuesto Aproximado</label>
+                    <select id="budget" name="budget">
+                        <option value="">Selecciona un rango</option>
+                        <option value="500-800">$500 - $800 USD</option>
+                        <option value="800-1200">$800 - $1200 USD</option>
+                        <option value="1200-1800">$1200 - $1800 USD</option>
+                        <option value="1800+">$1800+ USD (Premium)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Describe tu Visión *</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Cuéntanos sobre el diseño que tienes en mente, colores preferidos, características especiales, ocasiones de uso, etc." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Enviar Solicitud de Diseño</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" title="Facebook">📘</a>
+                <a href="#" title="Instagram">📷</a>
+                <a href="#" title="WhatsApp">📱</a>
+                <a href="#" title="Email">📧</a>
+            </div>
+            <p>&copy; 2025 Winter Design Studio. Todos los derechos reservados.</p>
+            <p>Diseñando el futuro de la moda invernal, una campera a la vez.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header background change on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(15, 23, 42, 0.98)';
+            } else {
+                header.style.background = 'rgba(15, 23, 42, 0.95)';
+            }
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Show success message
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+            
+            // Smooth scroll to success message
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Reset form after 2 seconds
+            setTimeout(() => {
+                this.reset();
+                successMessage.style.display = 'none';
+            }, 3000);
+            
+            // Here you would typically send the data to your server
+            console.log('Form data:', data);
+        });
+
+        // Portfolio item hover effects
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05) rotateY(5deg)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) rotateY(0deg)';
+            });
+        });
+
+        // Add some interactive snow effect
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.innerHTML = '❄';
+            snowflake.style.position = 'fixed';
+            snowflake.style.top = '-10px';
+            snowflake.style.left = Math.random() * window.innerWidth + 'px';
+            snowflake.style.color = 'rgba(255, 255, 255, 0.8)';
+            snowflake.style.pointerEvents = 'none';
+            snowflake.style.zIndex = '9999';
+            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+            snowflake.style.animation = `snowfall ${Math.random() * 10 + 10}s linear forwards`;
+            
+            document.body.appendChild(snowflake);
+            
+            setTimeout(() => {
+                snowflake.remove();
+            }, 15000);
+        }
+
+        // Create snowflakes periodically
+        setInterval(createSnowflake, 2000);
+    </script>
+</body>
+</html>
